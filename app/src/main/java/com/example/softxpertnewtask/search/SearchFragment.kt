@@ -94,7 +94,6 @@ class SearchFragment : Fragment() {
     private fun updateNetwork(authNetworkState: AuthNetworkState?) {
         if (authNetworkState == AuthNetworkState.LOADING) {
             binding.resultLoaderContainer.visibility = View.VISIBLE
-
         } else {
             binding.resultLoaderContainer.visibility = View.GONE
             when (authNetworkState) {
