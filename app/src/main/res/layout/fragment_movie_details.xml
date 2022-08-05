@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".details.MovieDetailsFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        />
+
+    <View
+        android:id="@+id/view_divided1"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="1dp"/>
+
+
+    <com.denzcoskun.imageslider.ImageSlider
+        app:layout_constraintTop_toBottomOf="@+id/view_divided1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:id="@+id/imageSlider"
+        app:iss_auto_cycle="true"
+        app:iss_delay="0"
+        app:iss_placeholder="@android:color/darker_gray"
+        app:iss_error_image="@android:color/darker_gray"
+        app:iss_corner_radius="5"
+        app:iss_selected_dot="@drawable/default_selected_dot"
+        app:iss_unselected_dot="@drawable/default_unselected_dot"
+        app:iss_period="1000"
+        tools:ignore="MissingConstraints" />
+
+    <com.willy.ratingbar.BaseRatingBar
+        android:id="@+id/movieRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintTop_toBottomOf="@+id/imageSlider"
+        app:srb_clearRatingEnabled="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srb_clickable="false"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="0"
+        app:srb_numStars="5"
+        app:srb_rating="0"
+        app:srb_scrollable="false"
+        />
+
+
+    <TextView
+        android:id="@+id/movieName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textStyle="bold"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/movieRating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/movieDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/grey_text"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/movieName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/movieYear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Year"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/grey_text"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/movieDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
